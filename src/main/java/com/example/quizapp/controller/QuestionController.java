@@ -1,5 +1,7 @@
 package com.example.quizapp.controller;
 
+import java.util.List;
+import com.example.quizapp.Question;
 import com.example.quizapp.service.QuestionService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +14,7 @@ public class QuestionController {
    @Autowired
    QuestionService questionService;
    @GetMapping("allQuestions")
-   public String getAllQuestions() {
+   public List<Question> getAllQuestions() {
 	  return questionService.getAllQuestions();
    }
 }
