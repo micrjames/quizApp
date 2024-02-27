@@ -1,7 +1,7 @@
 package com.example.quizapp.service;
 
 import java.util.List;
-import com.example.quizapp.Question;
+import com.example.quizapp.model.Question;
 import com.example.quizapp.dao.QuestionDao;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;

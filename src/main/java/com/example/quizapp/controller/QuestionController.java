@@ -1,7 +1,7 @@
 package com.example.quizapp.controller;
 
 import java.util.List;
-import com.example.quizapp.Question;
+import com.example.quizapp.model.Question;
 import com.example.quizapp.service.QuestionService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
