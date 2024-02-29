@@ -19,4 +19,8 @@ public class QuestionService {
 	  questionDao.save(question);
 	  return "success";
    }
+
+   public Question getQuestionById(int id) {
+	  return questionDao.findById(id).get();
+   }
 }
