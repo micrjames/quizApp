@@ -23,4 +23,21 @@ public class QuestionService {
    public Question getQuestionById(int id) {
 	  return questionDao.findById(id).get();
    }
+
+   public String updateQuestion(Question newQuestion, int id) {
+	  Question question = questionDao.findById(id).get();
+	  question.setQuestion(newQuestion.getQuestion());
+	  question.setOption1(newQuestion.getOption1());
+	  question.setOption2(newQuestion.getOption2());
+	  question.setOption3(newQuestion.getOption3());
+	  question.setOption4(newQuestion.getOption4());
+	  question.setRightanswer(newQuestion.getRightanswer());
+	  questionDao.save(question);
+	  return "success";
+   }
+
+   public String deleteQuestion(int id) {
+	  questionDao.deleteById(id);
+	  return "success";
+   }
 }
