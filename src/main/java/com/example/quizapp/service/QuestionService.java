@@ -14,4 +14,9 @@ public class QuestionService {
    public List<Question> getAllQuestions() {
 	  return questionDao.findAll();
    }
+
+   public String addQuestion(Question question) {
+	  questionDao.save(question);
+	  return "success";
+   }
 }
